@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  picture: MyString
+  avg_points: 1.5
+
+two:
+  picture: MyString
+  avg_points: 1.5

@@ -1,0 +1,26 @@
+<h1>Listing creations</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+	<th>Picture_URL</th>	
+    <th>Thumbnail</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @creations.each do |creation| %>
+  <tr>
+	<td><%= creation.id %></td>
+	<td><%= creation.picture_url %></td>
+	<td><%= creation.thumbnail_url %></td>
+    <td><%= link_to 'Show', creation %></td>
+    <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
+    <td><%= link_to 'Destroy', creation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Creation', new_creation_path %>

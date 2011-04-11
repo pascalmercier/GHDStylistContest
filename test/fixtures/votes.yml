@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  creation_id: 1
+  points: 1
+
+two:
+  creation_id: 1
+  points: 1

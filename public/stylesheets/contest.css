@@ -1,0 +1,139 @@
+body{
+	width: 600px;
+}
+h1{
+	text-align: center;
+	padding-bottom: 40px;
+}
+.entry{
+	clear: both;
+	display: block;
+}
+.profilePic{
+	float:left;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.stylistInfo{
+	font-size: 12px;
+	float: left;
+	padding-left: 15px;
+	width: 535px;
+	height: 50px;
+	padding-top: 10px;
+}
+.stylistName{
+	font-weight: bold;
+	font-size: 14px;
+}
+.salon{
+	font-weight: bold;
+}
+.creaInfo{
+	clear: both;
+	padding: 10px 0 10px 40px;
+	height: 130px;
+}
+.creationPic{
+	clear: none;
+	float: left;
+	border: 1px solid #efefef;
+	background: #ffffff; /* old browsers */
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+.creationPic:after{
+	z-index: -1; 
+	position: absolute; 
+	background: transparent; 
+	width: 70%; 
+	height: 55%; 
+	content: ''; 
+	right: 10px; 
+	bottom: 10px; 
+	transform: skew(15deg) rotate(6deg);
+	-webkit-transform: skew(15deg) rotate(6deg);
+	-moz-transform: skew(15deg) rotate(6deg);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.creationPic:before{
+	z-index: -2; 
+	position: absolute; 
+	background: transparent; 
+	width: 70%; 
+	height: 55%; 
+	content: ''; 
+	left: 10px; 
+	bottom: 10px; 
+	transform: skew(-15deg) rotate(-6deg); 
+	-webkit-transform: skew(-15deg) rotate(-6deg); 
+	-moz-transform: skew(-15deg) rotate(-6deg); 
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.score{
+	clear: none;
+	float: right;
+	background-color: #e1e1e1;
+	width: 75px;
+	height: 68px;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: inset 0 0 2px 2px #888;
+	-webkit-box-shadow: inset 0 0 2px 2px #888;
+	box-shadow: inset 0 0 3px 3px #888;
+}
+.avgLabel{
+	font-size: 10px;
+	position: relative;
+	top: 5px;
+}
+.avgPts{
+	line-height: 45px;
+	font-size: 28px;
+	font-weight: bold;
+}
+.rating{
+	float: left;
+}
+.ratingLabel{
+	font-weight: bold;
+	padding: 0 0 0 40px;
+	position: relative;
+	top:30px;
+}
+.rating p {
+	padding: 40px 0 0 40px;
+	margin: 0 0 2em
+}
+
+.rating label{display: block; float: left; width: 20px; height:20px; background: #CCC url(../images/star-rating.gif) 50% 0 no-repeat; text-indent:-9000px; cursor: pointer}
+
+.rating label.hover {background-position: 50% -20px }
+.rating label.rated {background-position: 50% -40px; }
+.rating label.ratedHover {background-position: 50% -60px; }
+
+
+.half label{width: 10px; background-position: 0 0}
+.half label.alt{background-position: 100% 0}
+
+.half label.hover {background-position: 0 -20px }
+.half label.hoverAlt {background-position: -10px -20px}
+
+.half label.rated {background-position: 0 -40px; }
+.half label.ratedAlt {background-position: -10px -40px}
+
+.half label.ratedHover {background-position: 0 -60px; }
+.half label.ratedHoverAlt {background-position: -10px -60px}
+
+.hiddenDivPicture{
+	display: none;
+}
+

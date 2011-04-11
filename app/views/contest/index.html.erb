@@ -1,0 +1,36 @@
+<h1>GHD Stylist Contest</h1>
+
+<% @creations.each do |creation| %>
+	<% @crea = creation %>
+	<div class='entry'>
+		<%= image_tag(creation.stylist.picture_url, :class => 'profilePic') %>
+		<div class='stylistInfo'>
+			<span class='stylistName'><%= creation.stylist.name %></span> from <span class='salon'><%= creation.stylist.salon %></span>
+		</div>
+		<div class='creaInfo'>
+			<%= link_to (image_tag creation.thumbnail_url, :class => 'creationPic'), 'javascript:void(0)', :onclick => "$('#picture#{creation.id}').lightbox_me();" %>
+			<div class='rating'>
+				<span class='ratingLabel'>Rate It!</span>
+				<!-- form id='ratingform<%= creation.id %>' action="/votes" method="post" name="rating" -->
+					<%= form_tag :url => { :action => "/votes" }, :remote => true, :id => :ratingform  %>
+					<p class="full">  
+						<label><input type="radio" name="vote[points]" value="1" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />1</label> 
+						<label><input type="radio" name="vote[points]" value="2" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />2</label> 
+						<label><input type="radio" name="vote[points]" value="3" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />3</label> 
+						<label><input type="radio" name="vote[points]" value="4" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />4</label> 
+						<label><input type="radio" name="vote[points]" value="5" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />5</label> 
+						<label><input type="radio" name="vote[points]" value="6" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />6</label> 
+						<label><input type="radio" name="vote[points]" value="7" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />7</label> 
+						<label><input type="radio" name="vote[points]" value="8" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />8</label> 
+						<label><input type="radio" name="vote[points]" value="9" onClick="document.forms['ratingform<%= creation.id %>'].submit();" />9</label> 
+						<label><input type="radio" name="vote[points]" value="10" onClick="document.forms['ratingform<%= creation.id %>'].submit();"/>10</label> 
+						<input type="hidden" name="vote[creation_id]" value='<%= creation.id %>' />
+					</p>
+				</form>
+			</div>
+			<div class='score' id='score<%= creation.id %>'><%= render "score" %></div>
+		</div>
+	</div>
+	<div id='picture<%= creation.id %>' class='hiddenDivPicture'> <%= image_tag creation.picture_url, :class => 'creationPic' %> </div>
+	<hr />
+<% end %>

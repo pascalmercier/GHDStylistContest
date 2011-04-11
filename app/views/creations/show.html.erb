@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Picture:</b>
+  <%= @creation.picture_url %>
+</p>
+
+<p>
+  <b>Thumbnail:</b>
+  <%= @creation.thumbnail_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_creation_path(@creation) %> |
+<%= link_to 'Back', creations_path %>
